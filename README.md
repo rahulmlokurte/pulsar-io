@@ -1,19 +1,15 @@
 <h1 align="center">Pulsar IO CustomConnector</h1>
-=================================
 This repository shows how to create a custom pulsar connector.
 
-Introduction:
-===
+# Introduction:
 Pulsar IO connectors enables us to easily create, deploy, and manage connectors that interact with external systems, such as MongoDb, Apache Kafka and many others.
 Pulsar IO connectors come in two types: **source** and **sink**.
 
 ![pulsar-io-concept](./images/pulsar-io-concept.png)
 
-Development
-===
+# Development
 We can develop Pulsar source connectors and sink connectors.
-
-##Source
+## Source
 To develop a source connector, we should implement the **Source** interface and need to override the **open** and **read** method.
 ```java
 /**
@@ -34,7 +30,7 @@ void open(final Map<String, Object> config, SourceContext sourceContext) throws 
     */
     Record<T> read() throws Exception;
 ```
-##Sink
+## Sink
 To develop a sink connector, we should implement the **Sink** interface and need to override the **open** and **write** method.
 
 ```java
