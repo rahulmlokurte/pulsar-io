@@ -52,3 +52,8 @@ To develop a sink connector, we should implement the **Sink** interface and need
     void write(Record<T> record) throws Exception;
 ```
 
+# Local Setup
+- Run the command mvn clean install.
+- Copy the generated NAR files to the connector's directory of apache pulsar.
+- start the sink connectors
+
